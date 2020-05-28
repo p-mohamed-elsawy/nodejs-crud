@@ -1,0 +1,24 @@
+<%- include('./shared/header') -%>
+
+    <div class="container pt-5">
+        
+        <div class="row">
+            
+        
+            <% events.forEach((event)=> {%>
+                <div class="card col-md-3" style="transform: scale(0.97);">
+                    <img src="<%- event.image -%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">  <%- event.title -%>  </h5>
+                    <p class="card-text"><%- event.description -%></p>
+                    <a href="/events/<%- event.id -%>" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            <%})%>
+
+
+            
+        </div>
+    </div>
+
+<%- include('./shared/footer') -%>
